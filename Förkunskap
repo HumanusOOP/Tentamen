@@ -1,0 +1,27 @@
+Från föregående kurs antar jag att ni kan hantera följande:
+
+if, else, while, for, foreach, switch/case
+try, catch, finally, throw
+class, interface, struct, enum,
+nullable,
+public, private, protected
+abstract classes, abstract methods
+break, continue
+int, long, bool, string, char, decimal, double, float, byte, [], Object, Exception
+static variables, methods and classes
+extension methods
+*, /, +, -, %
++=, -=, *=, /=
+++, --
+>=, <=, <, >, ==
+&&, ||, &=, |=, 
+fields, properties, methods
+variable scope
+reference types, value types
+implicit cast, explicit cast
+yield, return, out, ref
+konstruktor, destruktor
+virtual (ej för java)
+sealed
+grundläggande förståelse av termer så som operator, iterera/iterator, parse:a/parser, konvertera, referera/referens, instansiera/instans, cast:a, deklarera, escape
+det är bra med rimlig slutledningsförmåga också. Jag ska kunna använda funktioner som substring, length, indexof, console.writeline, readline
