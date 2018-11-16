@@ -1,0 +1,31 @@
+Förslag på tentamens omfattning:
+
+## Type generics  
+Bör kunna läsa/skriva och förstå kod som använder type generics
+
+## Datastrukturer
+Array, Multidimensional Array, List, LinkedList, HashSet, Dictionary, Stack, Queue
+Kunna redogöra för fördelar/nackdelar med olika datastrukturer. 
+Kunna känna igen datastrukturer i kod.
+
+## Algoritmer
+Kunna formulera en algoritm i flödesdiagram eller i text
+Kunna redogöra för en algoritms tidsåtgång och minnesåtgång, worst case, best case, O(1), O(n), O(n^2), O(log n)
+Kunna diskutera runt tradeoffs läsbarhet/effektivitet/abstraktionsnivå
+
+## Rekursion
+Kunna identifiera och designa rekursiva datastrukturer och algoritmer
+
+## Säkerhet
+Symmetrisk och asymmetrisk krypering
+
+## Design Patterns
+Factory Method, Singleton, Decorator, Adapter, Facade, Observer, State, Iterator, Chain Of Responsibility
+
+## SOLID
+Kommer senare...
+
+## Parallellprogrammering
+Kommer senare...
+
+Generell variabel/metod/klassnamngivning kommer att bedömas också.
