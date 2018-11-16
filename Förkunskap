@@ -20,7 +20,7 @@ variable scope
 reference types, value types
 implicit cast, explicit cast
 yield, return, (out, ref)
-konstruktor, destruktor
+konstruktor, destruktor, new
 virtual (ej för java)
 sealed (final i java)
 grundläggande förståelse av termer så som operator, iterera/iterator, parse:a/parser, konvertera, referera/referens, instansiera/instans, cast:a, deklarera, escape
