@@ -4,7 +4,7 @@ Förslag på tentamens omfattning:
 Bör kunna läsa/skriva och förstå kod som använder type generics
 
 ## Datastrukturer
-Array, Multidimensional Array, List, LinkedList, HashSet, Dictionary, Stack, Queue
+Array, Multidimensional Array, List, LinkedList, HashSet, Dictionary, Stack, Queue, Tuples
 Kunna redogöra för fördelar/nackdelar med olika datastrukturer. 
 Kunna känna igen datastrukturer i kod.
 
@@ -17,15 +17,25 @@ Kunna diskutera runt tradeoffs läsbarhet/effektivitet/abstraktionsnivå
 Kunna identifiera och designa rekursiva datastrukturer och algoritmer
 
 ## Säkerhet
-Symmetrisk och asymmetrisk krypering
+Symmetrisk och asymmetrisk kryptering.
 
 ## Design Patterns
 Factory Method, Singleton, Decorator, Adapter, Facade, Observer, State, Iterator, Chain Of Responsibility
 
 ## SOLID
-Kommer senare...
+Kunna beskriva de olika principerna.
+Kunna ge exempel på kod som uppfyller/ej uppfyller de olika principerna.
+Kunna känna igen kod som uppfyller/ej uppfyller de olika principerna.
 
 ## Parallellprogrammering
-Kommer senare...
+Känna till olika former får trådsynkronisering och kunna implementera dem i viss mån.
+Kunna förstå async/await i viss mån. Sorry java-people. Async/await är något som även finns i javascript och värt att lära sig.
 
-Generell variabel/metod/klassnamngivning kommer att bedömas också.
+## Testning
+Kunna skriva relevanta tester. Känna till vad mockning är, men inga särskilda bibliotek kommer att testas. Pseudokodnivå kan efterfrågas.
+
+## Övrig kunskap
+Kunskap kring vad en ORM gör och hur. Känna till hur vissa objektorienterade datastrukturer kan mappas mot relationsdatabasers struktur.
+Grundläggande kunskap kring HTTP. Känna till begrepp som controllers, url, http-verb, request/response, body
+Känna till grundläggande om transaktionshantering. (begin, commit, rollback)
+Generell variabel/metod/klassnamngivning och kodläsbarhet kommer också att bedömas.
