@@ -17,7 +17,7 @@ Kunna diskutera runt tradeoffs läsbarhet/effektivitet/abstraktionsnivå
 Kunna identifiera och designa rekursiva datastrukturer och algoritmer
 
 ## Säkerhet
-Symmetrisk och asymmetrisk kryptering.
+Symmetrisk och asymmetrisk kryptering. Känns till vad autentisering och auktorisering är, och vad det används till.
 
 ## Design Patterns
 Factory Method, Singleton, Decorator, Adapter, Facade, Observer, State, Iterator, Chain Of Responsibility
@@ -36,6 +36,6 @@ Kunna skriva relevanta tester. Känna till vad mockning är, men inga särskilda
 
 ## Övrig kunskap
 Kunskap kring vad en ORM gör och hur. Känna till hur vissa objektorienterade datastrukturer kan mappas mot relationsdatabasers struktur.
-Grundläggande kunskap kring HTTP. Känna till begrepp som controllers, url, http-verb, request/response, body
+Grundläggande kunskap kring HTTP. Känna till begrepp som controllers, url, http-verb, request/response, body, api, json, xml
 Känna till grundläggande om transaktionshantering. (begin, commit, rollback)
 Generell variabel/metod/klassnamngivning och kodläsbarhet kommer också att bedömas.
