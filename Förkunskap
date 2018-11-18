@@ -20,8 +20,8 @@ variable scope
 reference types, value types
 implicit cast, explicit cast
 yield, return, (out, ref)
-konstruktor, destruktor, new, this
+konstruktor, destruktor, new, this, void, base
 virtual (ej för java)
 sealed (final i java)
-grundläggande förståelse av termer så som operator, iterera/iterator, parse:a/parser, konvertera, referera/referens, instansiera/instans, cast:a, deklarera, escape
+grundläggande förståelse av termer så som operator, iterera/iterator, parse:a/parser, konvertera, referera/referens, instansiera/instans, cast:a, deklarera, escape, overload, override, subclass, superclass,
 det är bra med rimlig slutledningsförmåga också. Jag ska kunna använda funktioner som substring, length, indexof, console.writeline, readline
