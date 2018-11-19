@@ -5,8 +5,8 @@ G2. Ha använt git eller annat versionhanteringssystem genom processen
 G3. Åtminstone en pure function som är enhetstestad
 
 Förslag på krav för väl godkänt:
-G4. Ha använt dependency injection till mer än endast controllers
+G4. Ha använt dependency injection till mer än endast controllers och dbcontext
 G5. Ha implementerat åtminstone en "cross-cutting concern", förslagsvis som ett custom middleware (Interceptor i java Spring)
-G6. Ha konsistent namngivit klasser, metoder och kunna motivera sin uppdelning av komponenter
+G6. Ha konsekvent namngivit klasser, metoder och kunna motivera sin uppdelning av komponenter
 
 Redovisas senast 23 november (Personligen ger jag er gärna 1-2 veckor mer på detta än vad Marcus satt ut från början, med tanke på att vi har haft 2 veckor nu utan några särskilda krav eller förväntningar på er) 
