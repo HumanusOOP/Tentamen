@@ -1,6 +1,6 @@
 Från föregående kurs antar jag att ni kan hantera följande:
 
-if, else, while, for, foreach, switch/case
+if, else, while, for, foreach, switch/case, do/while
 try, catch, finally, throw
 class, interface, struct, enum,
 nullable (kanske inte för java),
