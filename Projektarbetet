@@ -1,6 +1,6 @@
 Förslag på krav för godkänt projektarbete:
 
-G1. En fullständig CRUD (POST/PUT/UPDATE/DELETE) från frontend hela vägen ned till databas
+G1. En fullständig CRUD (POST/PUT/GET/DELETE) från frontend hela vägen ned till databas
 G2. Ha använt git eller annat versionhanteringssystem genom processen
 G3. Åtminstone en pure function som är enhetstestad
 
