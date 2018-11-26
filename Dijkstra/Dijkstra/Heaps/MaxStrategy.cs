@@ -1,6 +1,6 @@
 ﻿namespace Dijkstra
 {
-    internal class MaxStrategy<T> : IHeapStrategy<T>
+    public class MaxStrategy<T> : IHeapStrategy<T>
     {
         private IComparer<T> _comparer;
 

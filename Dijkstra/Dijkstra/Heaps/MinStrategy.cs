@@ -1,6 +1,6 @@
 ﻿namespace Dijkstra
 {
-    internal class MinStrategy<T> : IHeapStrategy<T>
+    public class MinStrategy<T> : IHeapStrategy<T>
     {
         private IComparer<T> _comparer;
 

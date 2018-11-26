@@ -1,6 +1,6 @@
 ﻿namespace Dijkstra
 {
-    internal interface IHeapStrategy<T>
+    public interface IHeapStrategy<T>
     {
         bool Compare(T t1, T t2);
     }

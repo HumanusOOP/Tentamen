@@ -3,7 +3,14 @@ using System.Linq;
 
 namespace Dijkstra
 {
-    internal class Heap<T>
+    public interface IHeap<T>
+    {
+        void Add(T newValue);
+
+        T DeleteMin();
+    }
+
+    public class Heap<T> : IHeap<T>
     {
         private IHeapStrategy<T> _strategy;
         private List<T> _list = new List<T>();
@@ -13,15 +20,15 @@ namespace Dijkstra
             _strategy = strategy;
         }
 
-        internal void Add(T newValue)
+        public void Add(T newValue)
         {
             _list.Add(newValue);
 
-            Swap(newValue, _list.Count() - 1);
+            BubbleUp(newValue, _list.Count() - 1);
             
         }
 
-        private void Swap(T newValue, int newIndex)
+        private void BubbleUp(T newValue, int newIndex)
         {
             if (newIndex > 0)
             {
@@ -31,14 +38,14 @@ namespace Dijkstra
                 {
                     _list[parentIndex] = newValue;
                     _list[newIndex] = parentValue;
-                    
+
                     //Rekursivt anrop
-                    Swap(newValue, parentIndex);
+                    BubbleUp(newValue, parentIndex);
                 }
             }
         }
 
-        internal T DeleteMin()
+        public T DeleteMin()
         {
             var value = _list.First();
             _list = _list.Skip(1).ToList();
