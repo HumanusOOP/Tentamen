@@ -34,8 +34,11 @@ namespace Dijkstra
             var heap = new Heap<int>(new MinStrategy<int>(new IntComparer()));
             heap.Add(1);
             heap.Add(2);
-            Assert.AreEqual(1, heap.DeleteMin());
-            Assert.AreEqual(2, heap.DeleteMin());
+            var enumerator = heap.GetEnumerator();
+            enumerator.MoveNext();
+            Assert.AreEqual(1, enumerator.Current);
+            enumerator.MoveNext();
+            Assert.AreEqual(2, enumerator.Current);
         }
 
         [Test]
@@ -44,8 +47,11 @@ namespace Dijkstra
             var heap = new Heap<int>(new MinStrategy<int>(new IntComparer()));
             heap.Add(2);
             heap.Add(1);
-            Assert.AreEqual(1, heap.DeleteMin());
-            Assert.AreEqual(2, heap.DeleteMin());
+            var enumerator = heap.GetEnumerator();
+            enumerator.MoveNext();
+            Assert.AreEqual(1, enumerator.Current);
+            enumerator.MoveNext();
+            Assert.AreEqual(2, enumerator.Current);
         }
 
         [Test]
@@ -60,6 +66,26 @@ namespace Dijkstra
             heap.Add(3);
             heap.Add(1);
             Assert.AreEqual(1, heap.DeleteMin());
+        }
+
+        [Test]
+        public void TestRemoveMin()
+        {
+            var heap = new Heap<int>(new MinStrategy<int>(new IntComparer()));
+            heap.Add(2);
+            heap.Add(7);
+            heap.Add(4);
+            heap.Add(6);
+            heap.Add(5);
+            heap.Add(3);
+            heap.Add(1);
+            Assert.AreEqual(1, heap.DeleteMin());
+            Assert.AreEqual(2, heap.DeleteMin());
+            Assert.AreEqual(3, heap.DeleteMin());
+            Assert.AreEqual(4, heap.DeleteMin());
+            Assert.AreEqual(5, heap.DeleteMin());
+            Assert.AreEqual(6, heap.DeleteMin());
+            Assert.AreEqual(7, heap.DeleteMin());
         }
    
         [Test]
@@ -78,9 +104,16 @@ namespace Dijkstra
         public void TestParentIndex_RootIndexHasNoParent()
         {
             Assert.Throws<Exception>(() => ArrayBackedBinaryTreeHelper.GetParentIndex(0));
-            
+        }
+
+        [Test]
+
+        public void TestChildrenIndices()
+        {
+            var indices = ArrayBackedBinaryTreeHelper.GetChildrenIndices(0);
+            Assert.AreEqual(1, indices.left);
+            Assert.AreEqual(2, indices.right);
+
         }
     }
-
-    
 }

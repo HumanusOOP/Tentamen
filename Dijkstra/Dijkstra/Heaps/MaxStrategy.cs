@@ -8,6 +8,7 @@
         {
             _comparer = comparer;
         }
+        
         public bool Compare(T t1, T t2)
         {
             return _comparer.Compare(t2, t1);

@@ -1,9 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Dijkstra
 {
-    public interface IHeap<T>
+    public interface IHeap<T> : IEnumerable<T>
     {
         void Add(T newValue);
 
@@ -14,6 +15,7 @@ namespace Dijkstra
     {
         private IHeapStrategy<T> _strategy;
         private List<T> _list = new List<T>();
+        private int _length = 0;
 
         public Heap(IHeapStrategy<T> strategy)
         {
@@ -22,10 +24,11 @@ namespace Dijkstra
 
         public void Add(T newValue)
         {
-            _list.Add(newValue);
 
+            _list.Add(newValue);
+            _length++;
             BubbleUp(newValue, _list.Count() - 1);
-            
+
         }
 
         private void BubbleUp(T newValue, int newIndex)
@@ -44,12 +47,52 @@ namespace Dijkstra
                 }
             }
         }
-
+        
         public T DeleteMin()
         {
             var value = _list.First();
-            _list = _list.Skip(1).ToList();
+            _length = _length - 1;
+            _list.RemoveAt(0);
+            if(_length <= 1)
+            {
+                return value;
+            }
+
+            _list.Insert(0, _list.Last());
+            _list.RemoveAt(_length);
+            Sink();
             return value;
+        }
+
+        public void Sink(int index = 0)
+        {
+            var children = ArrayBackedBinaryTreeHelper.GetChildrenIndices(index);
+            if (children.left >= _length)
+            {
+                return;
+            }
+
+            var newIndex = children.right < _length
+                ? (_strategy.Compare(_list[children.left], _list[children.right]) ? children.left : children.right)
+                : children.left;
+
+            if (_strategy.Compare(_list[newIndex], _list[index]))
+            {
+                var temp = _list[index];
+                _list[index] = _list[newIndex];
+                _list[newIndex] = temp;
+                Sink(newIndex);
+            }
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            return _list.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return _list.GetEnumerator();
         }
     }
 }

@@ -17,5 +17,12 @@ namespace Dijkstra
 
             return (index - 1) / 2;
         }
+
+        public static (int left, int right) GetChildrenIndices(int index)
+        {
+            var left = (index * 2) + 1;
+            var right = left + 1;
+            return (left, right);
+        }
     }
 }
