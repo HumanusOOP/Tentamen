@@ -91,26 +91,26 @@ namespace Dijkstra
         [Test]
         public void TestParentIndexOddChild()
         {
-            Assert.AreEqual(2, ArrayBackedBinaryTreeHelper.GetParentIndex(5));
+            Assert.AreEqual(2, 5.GetParentIndex());
         }
 
         [Test]
         public void TestParentIndexEvenChild()
         {
-            Assert.AreEqual(2, ArrayBackedBinaryTreeHelper.GetParentIndex(6));
+            Assert.AreEqual(2, 6.GetParentIndex());
         }
 
         [Test]
         public void TestParentIndex_RootIndexHasNoParent()
         {
-            Assert.Throws<Exception>(() => ArrayBackedBinaryTreeHelper.GetParentIndex(0));
+            Assert.Throws<Exception>(() => 0.GetParentIndex());
         }
 
         [Test]
 
         public void TestChildrenIndices()
         {
-            var indices = ArrayBackedBinaryTreeHelper.GetChildrenIndices(0);
+            var indices = 0.GetChildrenIndices();
             Assert.AreEqual(1, indices.left);
             Assert.AreEqual(2, indices.right);
 

@@ -35,14 +35,11 @@ namespace Dijkstra
         {
             if (newIndex > 0)
             {
-                var parentIndex = ArrayBackedBinaryTreeHelper.GetParentIndex(newIndex);
+                var parentIndex = newIndex.GetParentIndex();
                 var parentValue = _list[parentIndex];
                 if (!_strategy.Compare(parentValue, newValue))
                 {
-                    _list[parentIndex] = newValue;
-                    _list[newIndex] = parentValue;
-
-                    //Rekursivt anrop
+                    _list.Swap(parentIndex, newIndex);
                     BubbleUp(newValue, parentIndex);
                 }
             }
@@ -66,7 +63,7 @@ namespace Dijkstra
 
         public void Sink(int index = 0)
         {
-            var children = ArrayBackedBinaryTreeHelper.GetChildrenIndices(index);
+            var children = index.GetChildrenIndices();
             if (children.left >= _length)
             {
                 return;
@@ -78,9 +75,7 @@ namespace Dijkstra
 
             if (_strategy.Compare(_list[newIndex], _list[index]))
             {
-                var temp = _list[index];
-                _list[index] = _list[newIndex];
-                _list[newIndex] = temp;
+                _list.Swap(index, newIndex);
                 Sink(newIndex);
             }
         }
