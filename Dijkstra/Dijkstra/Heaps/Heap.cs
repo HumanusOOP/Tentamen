@@ -4,13 +4,6 @@ using System.Linq;
 
 namespace Dijkstra
 {
-    public interface IHeap<T> : IEnumerable<T>
-    {
-        void Add(T newValue);
-
-        T DeleteMin();
-    }
-
     public class Heap<T> : IHeap<T>
     {
         private IHeapStrategy<T> _strategy;
