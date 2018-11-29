@@ -44,6 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Algorithm\DijkstrasAlgorithm.cs" />
+    <Compile Include="Algorithm\HeapNode.cs" />
+    <Compile Include="Algorithm\HeapNodeComparer.cs" />
+    <Compile Include="Algorithm\IHeapNode.cs" />
     <Compile Include="Graphs\AdjecencyMatrix.cs" />
     <Compile Include="Graphs\From.cs" />
     <Compile Include="Graphs\Set.cs" />

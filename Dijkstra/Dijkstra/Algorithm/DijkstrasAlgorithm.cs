@@ -24,7 +24,7 @@ namespace Dijkstra.Algorithm
 
         public List<INode> CreateShortestPathTree(IGraph<int> graph, char from)
         {
-
+            return null; //Implementera till nästa gång! :D
         }
     }
 
@@ -35,4 +35,3 @@ namespace Dijkstra.Algorithm
         public INode PreviousNode { get; set; }
     }
 }
-{

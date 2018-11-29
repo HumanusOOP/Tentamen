@@ -2,7 +2,7 @@
 {
     public class AdjecencyMatrix<T> : IGraph<T>
     {
-        public T[][] _matrix;
+        private T[][] _matrix;
 
         public AdjecencyMatrix(int n)
         {
