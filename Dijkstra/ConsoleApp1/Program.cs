@@ -1,4 +1,5 @@
 ﻿using Dijkstra;
+using Dijkstra.Algorithm;
 
 namespace ConsoleApp1
 {
@@ -9,10 +10,16 @@ namespace ConsoleApp1
             var matrix = new AdjecencyMatrix<int>(4);
            
             matrix
-                .From('A').To('B').Set(5).BiDirectional()
-                .From('A').To('C').Set(2).BiDirectional()
-                .From('B').To('C').Set(2).BiDirectional()
+                .From('A').To('B').Set(3).BiDirectional()
+                .From('A').To('C').Set(1).BiDirectional()
+                .From('A').To('D').Set(1).BiDirectional()
+                .From('B').To('C').Set(3).BiDirectional()
                 .From('B').To('D').Set(1).BiDirectional();
+
+            new DijkstrasAlgorithm().CreateShortestPathTree(matrix, 'A');
         }
     }
+
+
+
 }

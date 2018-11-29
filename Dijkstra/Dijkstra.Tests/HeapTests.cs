@@ -1,4 +1,5 @@
 ﻿using System;
+using Dijkstra.Algorithm;
 using NUnit.Framework;
 
 namespace Dijkstra
@@ -26,6 +27,16 @@ namespace Dijkstra
             heap.Add(2);
             Assert.AreEqual(2, heap.DeleteMin());
             Assert.AreEqual(1, heap.DeleteMin());
+        }
+
+        [Test]
+        public void TestAddTwoInReversedOrderHeapNode()
+        {
+            var heap = new Heap<IHeapNode>(new MinStrategy<IHeapNode>(new HeapNodeComparer()));
+            heap.Add(new HeapNode("A", 1));
+            heap.Add(new HeapNode("B", 2));
+            Assert.AreEqual("A", heap.DeleteMin().Name);
+            Assert.AreEqual(2, heap.DeleteMin().Value);
         }
 
         [Test]

@@ -43,6 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algorithm\DijkstrasAlgorithm.cs" />
+    <Compile Include="Graphs\AdjecencyMatrix.cs" />
+    <Compile Include="Graphs\From.cs" />
+    <Compile Include="Graphs\Set.cs" />
+    <Compile Include="Graphs\To.cs" />
     <Compile Include="Heaps\ArrayBackedBinaryTreeExtensions.cs" />
     <Compile Include="Heaps\Heap.cs" />
     <Compile Include="Heaps\IComparer.cs" />
@@ -51,7 +56,7 @@
     <Compile Include="Heaps\IntComparer.cs" />
     <Compile Include="Heaps\MaxStrategy.cs" />
     <Compile Include="Heaps\MinStrategy.cs" />
-    <Compile Include="IGraph.cs" />
+    <Compile Include="Graphs\IGraph.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
