@@ -1,84 +1,99 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Dijkstra
+﻿namespace Dijkstra
 {
-    public static class LetterIndexers
+    public class From<T>
     {
-        public static T From<T>(this T[] @this, char i)
+        private readonly Dijkstra.IGraph<T> graph;
+        private T[][] _matrix;
+        private int _from;
+
+        public From(IGraph<T> graph, T[][] matrix, char from)
         {
-            return @this[i - 65];
+            this.graph = graph;
+            _matrix = matrix;
+            _from = from - 65;
         }
 
-        public static Value<T> To<T>(this T[] @this, char i)
+        public To<T> To(char to)
         {
-            return new Value<T>(@this, i - 65);
+            return new To<T>(graph, _matrix, _from, to);
         }
     }
 
-    public class Value<T>
+    public class To<T>
     {
-        private readonly T[] backingArray;
-        private readonly int pos;
+        private IGraph<T> _graph;
+        private T[][] _matrix;
+        private int _from;
+        private int _to;
 
-        public Value(T[] backingArray, int pos)
+        public To(IGraph<T> graph, T[][] matrix, int from, char to)
         {
-            this.backingArray = backingArray;
-            this.pos = pos;
+            _graph = graph;
+            _matrix = matrix;
+            _to = to - 65;
+            _from = from;
         }
 
-        public ValueOptions<T> Set(T value)
+        public T Value => _matrix[_from][_to];
+
+        public Set<T> Set(T value)
         {
-            backingArray[pos] = value;
-            return new ValueOptions<T>(backingArray, pos);
+            _matrix[_from][_to] = value;
+            return new Set<T>(_graph, _matrix, _from, _to, value);
         }
     }
 
-    public class ValueOptions<T>
+    public class Set<T>
     {
-        private T[] backingArray;
-        private int pos;
+        private readonly IGraph<T> _graph;
+        private T[][] _matrix;
+        private int _from;
+        private int _to;
+        private readonly T _value;
 
-        public ValueOptions(T[] backingArray, int pos)
+        public Set(IGraph<T> graph, T[][] matrix, int from, int to, T value)
         {
-            this.backingArray = backingArray;
-            this.pos = pos;
+            _graph = graph;
+            _matrix = matrix;
+            _from = from;
+            _to = to;
+            _value = value;
         }
 
-        public void BiDirectional()
+        public IGraph<T> BiDirectional()
         {
-
+            _matrix[_to][_from] = _value;
+            return _graph;
         }
     }
+    
+    
 
-    public class AdjecencyMatrix<T> : IGraph
+    public class AdjecencyMatrix<T> : IGraph<T>
     {
         public T[][] _matrix;
 
         public AdjecencyMatrix(int n)
         {
             _matrix = new T[n][];
-            for(int i = 0; i<n; i++)
+            for (int i = 0; i < n; i++)
             {
                 _matrix[i] = new T[n];
             }
         }
 
-        public T[] From(char from)
+        public From<T> From(char from)
         {
-            return _matrix.From(from);
+            return new From<T>(this, _matrix, from);
         }
 
 
     }
 
-    interface IGraph
+    public interface IGraph<T>
     {
-        void Add(char from, char to, int value);
+        From<T> From(char from);
     }
 
-    
+
 }

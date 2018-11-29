@@ -48,5 +48,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dijkstra\Dijkstra.csproj">
+      <Project>{4D154232-5E74-41AC-AE33-5064A500D6B2}</Project>
+      <Name>Dijkstra</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
