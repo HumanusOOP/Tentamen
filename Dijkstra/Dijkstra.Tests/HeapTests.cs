@@ -16,7 +16,7 @@ namespace Dijkstra
 
             //Act
             sut.Add(1);
-            Assert.AreEqual(1, sut.DeleteMin());
+            Assert.AreEqual(1, sut.RemoveMin());
         }
 
         [Test]
@@ -25,8 +25,8 @@ namespace Dijkstra
             var heap = new Heap<int>(new MaxStrategy<int>(new IntComparer()));
             heap.Add(1);
             heap.Add(2);
-            Assert.AreEqual(2, heap.DeleteMin());
-            Assert.AreEqual(1, heap.DeleteMin());
+            Assert.AreEqual(2, heap.RemoveMin());
+            Assert.AreEqual(1, heap.RemoveMin());
         }
 
         [Test]
@@ -35,8 +35,8 @@ namespace Dijkstra
             var heap = new Heap<IHeapNode>(new MinStrategy<IHeapNode>(new HeapNodeComparer()));
             heap.Add(new HeapNode("A", 1));
             heap.Add(new HeapNode("B", 2));
-            Assert.AreEqual("A", heap.DeleteMin().Name);
-            Assert.AreEqual(2, heap.DeleteMin().Value);
+            Assert.AreEqual("A", heap.RemoveMin().Name);
+            Assert.AreEqual(2, heap.RemoveMin().Value);
         }
 
         [Test]
@@ -76,7 +76,7 @@ namespace Dijkstra
             heap.Add(5);
             heap.Add(3);
             heap.Add(1);
-            Assert.AreEqual(1, heap.DeleteMin());
+            Assert.AreEqual(1, heap.RemoveMin());
         }
 
         [Test]
@@ -90,13 +90,13 @@ namespace Dijkstra
             heap.Add(5);
             heap.Add(3);
             heap.Add(1);
-            Assert.AreEqual(1, heap.DeleteMin());
-            Assert.AreEqual(2, heap.DeleteMin());
-            Assert.AreEqual(3, heap.DeleteMin());
-            Assert.AreEqual(4, heap.DeleteMin());
-            Assert.AreEqual(5, heap.DeleteMin());
-            Assert.AreEqual(6, heap.DeleteMin());
-            Assert.AreEqual(7, heap.DeleteMin());
+            Assert.AreEqual(1, heap.RemoveMin());
+            Assert.AreEqual(2, heap.RemoveMin());
+            Assert.AreEqual(3, heap.RemoveMin());
+            Assert.AreEqual(4, heap.RemoveMin());
+            Assert.AreEqual(5, heap.RemoveMin());
+            Assert.AreEqual(6, heap.RemoveMin());
+            Assert.AreEqual(7, heap.RemoveMin());
         }
    
         [Test]

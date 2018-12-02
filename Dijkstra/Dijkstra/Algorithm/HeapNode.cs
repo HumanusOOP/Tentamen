@@ -1,6 +1,6 @@
 ﻿namespace Dijkstra.Algorithm
 {
-    public class HeapNode : IHeapNode
+    public class HeapNode
     {
         public HeapNode(string name, int value)
         {

@@ -7,7 +7,7 @@ namespace ConsoleApp1
     {
         public static void Main(string[] args)
         {
-            var matrix = new AdjecencyMatrix<int>(4);
+            var matrix = new AdjecencyMatrix<int?>(4, x => x.HasValue);
            
             matrix
                 .From('A').To('B').Set(3).BiDirectional()
@@ -16,7 +16,7 @@ namespace ConsoleApp1
                 .From('B').To('C').Set(3).BiDirectional()
                 .From('B').To('D').Set(1).BiDirectional();
 
-            new DijkstrasAlgorithm().CreateShortestPathTree(matrix, 'A');
+            var nodes = new DijkstrasAlgorithm().CreateShortestPathTree(matrix, 'A');
         }
     }
 

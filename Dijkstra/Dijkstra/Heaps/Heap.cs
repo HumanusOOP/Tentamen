@@ -38,8 +38,13 @@ namespace Dijkstra
             }
         }
         
-        public T DeleteMin()
+        public T RemoveMin()
         {
+            if (!_list.Any())
+            {
+                return default(T);
+            }
+
             var value = _list.First();
             _length = _length - 1;
             _list.RemoveAt(0);

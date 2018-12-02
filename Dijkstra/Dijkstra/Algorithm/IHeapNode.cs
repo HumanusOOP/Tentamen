@@ -3,6 +3,6 @@
     public interface IHeapNode
     {
         int Value { get; }
-        string Name { get; }
+        char Name { get; }
     }
 }

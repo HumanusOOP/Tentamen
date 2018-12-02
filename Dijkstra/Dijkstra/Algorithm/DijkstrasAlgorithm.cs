@@ -1,37 +1,16 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Dijkstra.Algorithm
 {
-    //public class ExcelLikeAlphabet : IEnumerable<string>
-    //{
-    //    public IEnumerator<string> GetEnumerator()
-    //    {
-
-    //    }
-
-    //    IEnumerator IEnumerable.GetEnumerator()
-    //    {
-    //        throw new NotImplementedException();
-    //    }
-    //}
-
     public class DijkstrasAlgorithm
     {
-        public Heap<IHeapNode> minHeap = new Heap<IHeapNode>(new MinStrategy<IHeapNode>(new HeapNodeComparer()));
-        public HashSet<IHeapNode> visited = new HashSet<IHeapNode>();
+        public Heap<Node> minHeap = new Heap<Node>(new MinStrategy<Node>(new HeapNodeComparer()));
+        public HashSet<char> visited = new HashSet<char>();
 
-        public List<INode> CreateShortestPathTree(IGraph<int> graph, char from)
+        Dictionary<char, Node> nodes = new Dictionary<char, Node>();
+        public List<Node> CreateShortestPathTree(IGraph<int?> graph, char from)
         {
-            return null; //Implementera till nästa gång! :D
+          
         }
-    }
-
-    public class INode
-    {
-        public string Name { get; set; }
-        public int ShortestPathLength { get; set; }
-        public INode PreviousNode { get; set; }
     }
 }

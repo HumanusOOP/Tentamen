@@ -6,6 +6,6 @@ namespace Dijkstra
     {
         void Add(T newValue);
 
-        T DeleteMin();
+        T RemoveMin();
     }
 }
