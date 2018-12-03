@@ -1,4 +1,6 @@
-﻿using Dijkstra;
+﻿using System;
+using System.Text;
+using Dijkstra;
 using Dijkstra.Algorithm;
 
 namespace ConsoleApp1
@@ -19,7 +21,4 @@ namespace ConsoleApp1
             var nodes = new DijkstrasAlgorithm().CreateShortestPathTree(matrix, 'A');
         }
     }
-
-
-
 }

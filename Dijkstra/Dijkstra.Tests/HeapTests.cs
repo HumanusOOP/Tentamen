@@ -32,9 +32,9 @@ namespace Dijkstra
         [Test]
         public void TestAddTwoInReversedOrderHeapNode()
         {
-            var heap = new Heap<IHeapNode>(new MinStrategy<IHeapNode>(new HeapNodeComparer()));
-            heap.Add(new HeapNode("A", 1));
-            heap.Add(new HeapNode("B", 2));
+            var heap = new Heap<Node>(new MinStrategy<Node>(new HeapNodeComparer()));
+            heap.Add(new Node('A') { Value = 1 });
+            heap.Add(new Node('B') { Value = 2 });
             Assert.AreEqual("A", heap.RemoveMin().Name);
             Assert.AreEqual(2, heap.RemoveMin().Value);
         }
