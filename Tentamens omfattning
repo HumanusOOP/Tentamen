@@ -4,7 +4,7 @@ Förslag på tentamens omfattning:
 Bör kunna läsa/skriva och förstå kod som använder type generics
 
 ## Datastrukturer
-Array, Multidimensional Array, List, LinkedList, HashSet, Dictionary, Stack, Queue, Tuples
+Array, Multidimensional Array, List, LinkedList, HashSet, Dictionary, Stack, Queue, Tuples, Heap
 Kunna redogöra för fördelar/nackdelar med olika datastrukturer. 
 Kunna känna igen datastrukturer i kod.
 
@@ -20,7 +20,7 @@ Kunna identifiera och designa rekursiva datastrukturer och algoritmer
 Symmetrisk och asymmetrisk kryptering. Känns till vad autentisering och auktorisering är, och vad det används till.
 
 ## Design Patterns
-Factory Method, Singleton, Decorator, Adapter, Facade, Observer, State, Iterator, Chain Of Responsibility
+Factory Method, Singleton, Decorator, Adapter, Facade, Observer, State, Iterator, Chain Of Responsibility. Obs fler kan komma på tentan. Alla patterns i GOF är av intresse!
 
 ## SOLID
 Kunna beskriva de olika principerna.
