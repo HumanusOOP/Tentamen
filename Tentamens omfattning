@@ -39,3 +39,4 @@ Kunskap kring vad en ORM gör och hur. Känna till hur vissa objektorienterade d
 Grundläggande kunskap kring HTTP. Känna till begrepp som controllers, url, http-verb, request/response, body, api, json, xml
 Känna till grundläggande om transaktionshantering. (begin, commit, rollback)
 Generell variabel/metod/klassnamngivning och kodläsbarhet kommer också att bedömas.
+Dependency injection.
