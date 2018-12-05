@@ -9,6 +9,7 @@ namespace TestTentamen
 {
 
     // Uppgift 1a
+    // OBS, fungerar inte helt!
     public static class StringExtensions
     {
         public static int LastIndexOf2(this string @this, string value)
